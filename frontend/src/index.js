@@ -1,19 +1,50 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-// import App from './App';
-// import reportWebVitals from './reportWebVitals';
+import {BrowserRouter,Routes,Route}from "react-router-dom";
+import Navbar from './landing_page/Navbar';
+import HomePage from './landing_page/home/HomePage';
+import Signup from './landing_page/signup/Signup';
+import AboutPage from './landing_page/about/AboutPage';
+import ProductPage from './landing_page/products/ProductPage';
+import PricingPage from './landing_page/pricing/PricingPage';
+import SupportPage from './landing_page/support/SupportPage';
+import NotFound from './landing_page/NotFound';
+import Footer from './landing_page/Footer';
+import {  useLocation } from "react-router-dom";
+import MobileOtp from './landing_page/signup/MobileOtp';
+import Login from "./landing_page/signup/login";
+
+function App() {
+  const location = useLocation();
+  const isOtpPage = location.pathname === '/mobile-otp';
+
+  return (
+    <>
+      <Navbar hideOptions={isOtpPage} />
+
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/mobile-otp" element={<MobileOtp />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/product" element={<ProductPage />} />
+        <Route path="/pricing" element={<PricingPage />} />
+        <Route path="/support" element={<SupportPage />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+
+      {!isOtpPage && <Footer />}
+    </>
+  );
+}
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
- <div>
-  <h1>hello</h1>
- </div>
-  </React.StrictMode>
-);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+root.render(
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
+);
 
