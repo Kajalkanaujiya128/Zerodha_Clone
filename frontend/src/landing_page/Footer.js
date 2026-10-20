@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from "react-router-dom";
+
 function Footer() {
     return ( 
 <footer style={{
@@ -9,55 +11,55 @@ function Footer() {
         <div className='container  mt-5' style={{backgroundColor:"rgb(250,250,250)"}}>
           <div className='row mt-5' >
             <div className='col'>
-                <img src='media/images/logo.svg' style={{width:"50%"}}/>
+                <img src='media/images/logo.svg'  alt="Zerodha logo" style={{width:"50%"}}/>
                 <p> &copy; 2010 - 2024, Not Zerodha Booking Ltd. All rights reserved.</p>
 
                   <div className='mt-3'>
-        <a href="" className='me-3' style={{color:"gray"}}>
+        <Link to="#" className='me-3' style={{color:"gray"}}>
             <i className="fa-brands fa-x-twitter"></i>
-        </a>
+        </Link>
 
-        <a href="" className='me-3' style={{color:"gray"}}>
+        <Link href="" className='me-3' style={{color:"gray"}}>
             <i className="fa-brands fa-facebook"></i>
-        </a>
+        </Link>
 
-        <a href="" className='me-3' style={{color:"gray"}}>
+        <Link href="" className='me-3' style={{color:"gray"}}>
             <i className="fa-brands fa-instagram"></i>
-        </a>
+        </Link>
 
-        <a href="" className='me-3' style={{color:"gray"}}>
+        <Link href="" className='me-3' style={{color:"gray"}}>
             <i className="fa-brands fa-linkedin"></i>
-        </a>
+        </Link>
 
-        <a href="" style={{color:"gray"}}>
+        <Link href="" style={{color:"gray"}}>
             <i className="fa-brands fa-telegram"></i>
-        </a>
+        </Link>
     </div>
             </div>
             <div className='col '>
                 <p>Company</p>
-                <a href="" className='d-block text-muted mb-3' style={{textDecoration:"none"}}>About</a>
-                <a href="" className='d-block text-muted mb-3' style={{textDecoration:"none"}}>Products</a>
-                <a href="" className='d-block text-muted mb-3' style={{textDecoration:"none"}}>Pricing</a>
-                <a href="" className='d-block text-muted mb-3' style={{textDecoration:"none"}}>Referral programme</a>
-                <a href="" className='d-block text-muted mb-3' style={{textDecoration:"none"}}>Careers</a>
-                <a href="" className='d-block text-muted mb-3' style={{textDecoration:"none"}}>Zerodha.tech</a>
-                <a href="" className='d-block text-muted mb-3' style={{textDecoration:"none"}}>Press & media</a>
-                <a href="" className='d-block text-muted mb-3' style={{textDecoration:"none"}}>Zerodha cares (CSR)</a>
+                <Link href="" className='d-block text-muted mb-3' style={{textDecoration:"none"}}>About</Link>
+                <Link href="" className='d-block text-muted mb-3' style={{textDecoration:"none"}}>Products</Link>
+                <Link href="" className='d-block text-muted mb-3' style={{textDecoration:"none"}}>Pricing</Link>
+                <Link href="" className='d-block text-muted mb-3' style={{textDecoration:"none"}}>Referral programme</Link>
+                <Link href="" className='d-block text-muted mb-3' style={{textDecoration:"none"}}>Careers</Link>
+                <Link href="" className='d-block text-muted mb-3' style={{textDecoration:"none"}}>Zerodha.tech</Link>
+                <Link href="" className='d-block text-muted mb-3' style={{textDecoration:"none"}}>Press & media</Link>
+                <Link href="" className='d-block text-muted mb-3' style={{textDecoration:"none"}}>Zerodha cares (CSR)</Link>
             </div>
             <div className='col'>
                 <p>Support</p>
-                <a href="" className='d-block text-muted mb-3' style={{textDecoration:"none"}}>Contact</a> 
-                <a href="" className='d-block text-muted mb-3' style={{textDecoration:"none"}}>Support portal</a> 
-                <a href="" className='d-block text-muted mb-3' style={{textDecoration:"none"}}>Z-Connect blog</a> 
-                                <a href="" className='d-block text-muted mb-3' style={{textDecoration:"none"}}>List of charge3</a>
-                <a href="" className='d-block text-muted mb-3' style={{textDecoration:"none"}}>Downloads & resources</a>
+                <Link href="" className='d-block text-muted mb-3' style={{textDecoration:"none"}}>Contact</Link> 
+                <Link href="" className='d-block text-muted mb-3' style={{textDecoration:"none"}}>Support portal</Link> 
+                <Link href="" className='d-block text-muted mb-3' style={{textDecoration:"none"}}>Z-Connect blog</Link> 
+                                <Link href="" className='d-block text-muted mb-3' style={{textDecoration:"none"}}>List of charge3 </Link>
+                <Link href="" className='d-block text-muted mb-3' style={{textDecoration:"none"}}>Downloads & resources</Link>
             </div>
             <div className='col'>
                 <p>Account</p>
-                <a href="" className='d-block text-muted mb-3' style={{textDecoration:"none"}}>Open an account</a> 
-                <a href="" className='d-block text-muted mb-3' style={{textDecoration:"none"}}>Fund transfer</a>
-                 <a href="" className='d-block text-muted mb-3' style={{textDecoration:"none"}}>60 day challenge</a>
+                <Link href="" className='d-block text-muted mb-3' style={{textDecoration:"none"}}>Open an account</Link> 
+                <Link href="" className='d-block text-muted mb-3' style={{textDecoration:"none"}}>Fund transfer</Link>
+                 <Link href="" className='d-block text-muted mb-3' style={{textDecoration:"none"}}>60 day challenge</Link>
 
             </div>
           </div>
