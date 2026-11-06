@@ -1,6 +1,5 @@
 import React,{useState,useEffect} from "react";
-// import { positions } from "../data/data";
-  import axios from "axios";
+import axios from "axios";
 const Positions=() =>{
         const [allPositions,setAllPositions]=useState([]);
         useEffect(()=>{
@@ -11,8 +10,7 @@ const Positions=() =>{
              .catch((err) => {
                 console.log("ERROR:", err);
             });
-    
-    
+
         },[]);
     return(
         <>
