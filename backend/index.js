@@ -287,7 +287,14 @@ app.post('/newOrder',async(req,res)=>{
   res.send("order saved!");
 });
 
-
+app.get("/allOrders", async (req, res) => {
+  try {
+    const allOrders = await OrdersModel.find({});
+    res.json(allOrders);
+  } catch (error) {
+    res.status(500).json({ error: "Failed to fetch orders" });
+  }
+});
 
 app.listen(PORT,()=>{
     console.log("app started");
