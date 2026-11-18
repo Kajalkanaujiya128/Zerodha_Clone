@@ -26,7 +26,12 @@ app.use(bodyParser.json());
 
 app.use(
   cors({
-    origin: ["http://localhost:3000","http://localhost:3003"],
+        origin: [
+      "http://localhost:3000",
+      "http://localhost:3003",
+      "https://zerodha-clone-kajal-128.netlify.app",
+      "https://zerodha-clone-dashboard-kajal128.netlify.app"
+    ],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })

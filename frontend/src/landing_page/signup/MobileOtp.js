@@ -110,8 +110,8 @@ const handleContinue = async (e) => {
     const mode = location.state?.mode;
     const endpoint =
       mode === "login"
-        ? "http://localhost:3002/login"
-        : "http://localhost:3002/signup";
+      ? "https://zerodha-clone-5b2m.onrender.com/login"
+      : "https://zerodha-clone-5b2m.onrender.com/signup";
 
     const response = await fetch(endpoint, {
       method: "POST",
