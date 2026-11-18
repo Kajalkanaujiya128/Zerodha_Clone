@@ -39,51 +39,7 @@ function MobileOTP() {
     alert("Demo OTP is 123456. No SMS was sent.");
   };
 
-//   const handleContinue = async(e) => {
-//     e.preventDefault();
 
-//     if (otp.length !== 6) {
-//       alert("Please enter the 6-digit OTP.");
-//       return;
-//     }
-
-//     if (otp !== demoOtp) {
-//       alert("Incorrect OTP. Please enter 123456.");
-//       setOtp("");
-//       return;
-//     }
-
-  
-//     if (!phone) {
-//     alert("Mobile number missing. Please sign up again.");
-//     navigate("/signup");
-//     return;
-//   }
-
-//   try {
-//     const response = await fetch("http://localhost:3002/signup", {
-//       method: "POST",
-//       headers: {
-//         "Content-Type": "application/json",
-//       },
-//       body: JSON.stringify({ phone }),
-//     });
-
-//     const data = await response.json();
-
-//     if (response.status === 201) {
-//       alert("Demo verification successful! Mobile number saved.");
-//       window.location.href = "http://localhost:3003/";
-//     } else if (response.status === 409) {
-//       alert("This mobile number is already registered.");
-//     } else {
-//       alert(data.message || "Signup failed. Please try again.");
-//     }
-//   } catch (error) {
-//     console.error("Signup error:", error);
-//     alert("Backend se connection nahi ho raha. Please check the backend.");
-//   }
-// };
    
 
 const handleContinue = async (e) => {
@@ -125,7 +81,7 @@ const handleContinue = async (e) => {
 
     if (response.ok) {
       alert("Demo verification successful!");
-      window.location.href = "http://localhost:3001/";
+      window.location.assign ( "https://zerodha-clone-dashboard-kajal128.netlify.app/");
     } else {
       alert(data.message || "Please try again.");
     }
