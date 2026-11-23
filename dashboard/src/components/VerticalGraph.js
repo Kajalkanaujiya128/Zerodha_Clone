@@ -1,3 +1,44 @@
+// import {
+//   Chart as ChartJS,
+//   CategoryScale,
+//   LinearScale,
+//   BarElement,
+//   Title,
+//   Tooltip,
+//   Legend,
+// } from 'chart.js';
+// import { Bar } from 'react-chartjs-2';
+
+
+// ChartJS.register(
+//   CategoryScale,
+//   LinearScale,
+//   BarElement,
+//   Title,
+//   Tooltip,
+//   Legend
+// );
+
+// export const options = {
+//   responsive: true,
+//   plugins: {
+//     legend: {
+//       position: 'top' ,
+//     },
+//     title: {
+//       display: true,
+//       text: 'Holdings',
+//     },
+//   },
+// };
+
+
+
+// export function VerticalGraph({data}) {
+//   return <Bar options={options} data={data} />;
+// }
+
+
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -6,9 +47,8 @@ import {
   Title,
   Tooltip,
   Legend,
-} from 'chart.js';
-import { Bar } from 'react-chartjs-2';
-
+} from "chart.js";
+import { Bar } from "react-chartjs-2";
 
 ChartJS.register(
   CategoryScale,
@@ -21,19 +61,22 @@ ChartJS.register(
 
 export const options = {
   responsive: true,
+  maintainAspectRatio: false,
   plugins: {
     legend: {
-      position: 'top' ,
+      position: "top",
     },
     title: {
       display: true,
-      text: 'Holdings',
+      text: "Holdings",
     },
   },
 };
 
-
-
-export function VerticalGraph({data}) {
-  return <Bar options={options} data={data} />;
+export function VerticalGraph({ data }) {
+  return (
+    <div className="vertical-chart-container">
+      <Bar options={options} data={data} />
+    </div>
+  );
 }
