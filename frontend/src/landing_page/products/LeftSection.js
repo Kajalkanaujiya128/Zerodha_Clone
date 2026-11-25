@@ -11,38 +11,42 @@ function LeftSection({
     appStore,
 }) {
     return (
-        <div className="container mt-5">
-            <div className="row">
-                <div className="col-6">
+        <div className="container mt-4 mt-md-5">
+            <div className="row align-items-center">
+
+                <div className="col-12 col-md-6 text-center p-3">
                     <img
                         src={imageURL}
                         alt={`${productName} product`}
+                        className="img-fluid"
                     />
                 </div>
 
-                <div className="col-6 p-5 mt-5">
+                <div className="col-12 col-md-6 p-3 p-md-5 mt-3 mt-md-5">
                     <h1>{productName}</h1>
+
                     <p>{productDescription}</p>
 
-                    <div>
+                    <div className="d-flex flex-wrap gap-3">
                         <a
-                            href={"http://localhost:3001"}
+                            href={tryDemo || "http://localhost:3001"}
                             target="_blank"
                             rel="noreferrer"
                         >
                             Try Demo
                         </a>
 
-                        <Link to="/about" style={{ marginLeft: "50px" }}>
+                        <Link to="/about">
                             Learn more
                         </Link>
                     </div>
 
-                    <div className="mt-3">
+                    <div className="mt-3 d-flex flex-wrap align-items-center gap-3">
                         <a href={googlePlay}>
                             <img
                                 src="media/images/googlePlayBadge.svg"
                                 alt="Get it on Google Play"
+                                className="img-fluid"
                             />
                         </a>
 
@@ -50,10 +54,11 @@ function LeftSection({
                             <img
                                 src="media/images/appStoreBadge.svg"
                                 alt="Download on the App Store"
-                                style={{ marginLeft: "50px" }}
+                                className="img-fluid"
                             />
                         </a>
                     </div>
+
                 </div>
             </div>
         </div>

@@ -1,82 +1,120 @@
-
-
-
 import React from "react";
 import { Link } from "react-router-dom";
 
 function CreateTicket() {
+    const supportTopics = [
+        {
+            icon: "fa fa-plus-circle",
+            title: "Account Opening",
+            links: [
+                "Online Account Opening",
+                "Offering Account Opening",
+                "Company, Partnership and HUF Account Opening",
+                "NRI Account Opening",
+                "Charges at Zerodha",
+                "Zerodha IDFC FIRST Bank 3-in-1 Account",
+                "Getting Started"
+            ]
+        },
+        {
+            icon: "fa-solid fa-user",
+            title: "Your Zerodha Account",
+            links: [
+                "Login Credentials",
+                "Account Modifications and Segment Addition",
+                "DP ID and bank details",
+                "Your Profile",
+                "Transfer and conversion of shares"
+            ]
+        },
+        {
+            icon: "fa-solid fa-chart-column",
+            title: "Trading and Platforms",
+            links: [
+                "Margin/leverage, Product and Order types",
+                "Kite Web and Mobile",
+                "Trading FAQs",
+                "Corporate Account",
+                "Sentinel",
+                "Kite API",
+                "Pi and other platforms",
+                "Stockreports+",
+                "GTT"
+            ]
+        },
+        {
+            icon: "fa-solid fa-chart-pie",
+            title: "Funds",
+            links: [
+                "Adding Funds",
+                "Fund Withdrawal",
+                "eMandates",
+                "Adding Bank Accounts"
+            ]
+        },
+        {
+            icon: "fa-regular fa-circle",
+            title: "Console",
+            links: [
+                "Reports",
+                "Ledger",
+                "Portfolio",
+                "60 Day Challenge",
+                "IPO",
+                "Referral Program"
+            ]
+        },
+        {
+            icon: "fa-solid fa-circle-dollar-to-slot",
+            title: "Coin",
+            links: [
+                "Understanding Mutual Funds",
+                "About Coin",
+                "Buying and Selling through Coin",
+                "Starting an SIP",
+                "Managing your Portfolio",
+                "Coin App",
+                "Moving to Coin",
+                "Government Securities"
+            ]
+        }
+    ];
+
     return (
-        <div className="container">
-            <div className="row p-5 mt-5 mb-5">
-                <h1 className="fs-2">
-                    To create a ticket, select a relevant topic
-                </h1>
+        <div className="container create-ticket-page">
+            <div className="row py-4 py-md-5 mt-3 mt-md-5 mb-4 mb-md-5">
 
-                <div className="col-4 p-5 mt-2 mb-2">
-                    <h4>
-                        <i className="fa fa-plus-circle" aria-hidden="true"></i>{" "}
-                        Account Opening
-                    </h4>
-                    <Link to="/support" style={{ textDecoration: "none", lineHeight: "2.5" }}>Online Account Opening</Link><br />
-                    <Link to="/support" style={{ textDecoration: "none", lineHeight: "2.5" }}>Offering Account Opening</Link><br />
-                    <Link to="/support" style={{ textDecoration: "none", lineHeight: "2.5" }}>Company, Partnership and HUF Account Opening</Link><br />
-                    <Link to="/support" style={{ textDecoration: "none", lineHeight: "2.5" }}>NRI Account Opening</Link><br />
-                    <Link to="/support" style={{ textDecoration: "none", lineHeight: "2.5" }}>Charges at Zerodha</Link><br />
-                    <Link to="/support" style={{ textDecoration: "none", lineHeight: "2.5" }}>Zerodha IDFC FIRST Bank 3-in-1 Account</Link><br />
-                    <Link to="/support" style={{ textDecoration: "none", lineHeight: "2.5" }}>Getting Started</Link><br />
+                <div className="col-12 mb-3">
+                    <h1 className="fs-2 create-ticket-heading">
+                        To create a ticket, select a relevant topic
+                    </h1>
                 </div>
 
-                <div className="col-4 p-5 mt-2 mb-2">
-                    <h4><i className="fa-solid fa-user"></i> Your Zerodha Account</h4>
-                    <Link to="/support" style={{ textDecoration: "none", lineHeight: "2.5" }}>Login Credentials</Link><br />
-                    <Link to="/support" style={{ textDecoration: "none", lineHeight: "2.5" }}>Account Modifications and Segment Addition</Link><br />
-                    <Link to="/support" style={{ textDecoration: "none", lineHeight: "2.5" }}>DP ID and bank details</Link><br />
-                    <Link to="/support" style={{ textDecoration: "none", lineHeight: "2.5" }}>Your Profile</Link><br />
-                    <Link to="/support" style={{ textDecoration: "none", lineHeight: "2.5" }}>Transfer and conversion of shares</Link><br />
-                </div>
+                {supportTopics.map((topic, index) => (
+                    <div
+                        className="col-12 col-md-6 col-lg-4 p-3 p-md-4"
+                        key={index}
+                    >
+                        <div className="support-topic-card">
+                            <h4>
+                                <i className={topic.icon} aria-hidden="true"></i>
+                                {" "}{topic.title}
+                            </h4>
 
-                <div className="col-4 p-5 mt-2 mb-2">
-                    <h4><i className="fa-solid fa-chart-column"></i> Trading and Platforms</h4>
-                    <Link to="/support" style={{ textDecoration: "none", lineHeight: "2.5" }}>Margin/leverage, Product and Order types</Link><br />
-                    <Link to="/support" style={{ textDecoration: "none", lineHeight: "2.5" }}>Kite Web and Mobile</Link><br />
-                    <Link to="/support" style={{ textDecoration: "none", lineHeight: "2.5" }}>Trading FAQs</Link><br />
-                    <Link to="/support" style={{ textDecoration: "none", lineHeight: "2.5" }}>Corporate Account</Link><br />
-                    <Link to="/support" style={{ textDecoration: "none", lineHeight: "2.5" }}>Sentinel</Link><br />
-                    <Link to="/support" style={{ textDecoration: "none", lineHeight: "2.5" }}>Kite API</Link><br />
-                    <Link to="/support" style={{ textDecoration: "none", lineHeight: "2.5" }}>Pi and other platforms</Link><br />
-                    <Link to="/support" style={{ textDecoration: "none", lineHeight: "2.5" }}>Stockreports+</Link><br />
-                    <Link to="/support" style={{ textDecoration: "none", lineHeight: "2.5" }}>GTT</Link><br />
-                </div>
+                            <div className="support-topic-links">
+                                {topic.links.map((link, linkIndex) => (
+                                    <Link
+                                        to="/support"
+                                        key={linkIndex}
+                                    >
+                                        {link}
+                                    </Link>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                ))}
 
-                <div className="col-4 p-5 mt-2 mb-2">
-                    <h4><i className="fa-solid fa-chart-pie"></i> Funds</h4>
-                    <Link to="/support" style={{ textDecoration: "none", lineHeight: "2.5" }}>Adding Funds</Link><br />
-                    <Link to="/support" style={{ textDecoration: "none", lineHeight: "2.5" }}>Fund Withdrawal</Link><br />
-                    <Link to="/support" style={{ textDecoration: "none", lineHeight: "2.5" }}>eMandates</Link><br />
-                    <Link to="/support" style={{ textDecoration: "none", lineHeight: "2.5" }}>Adding Bank Accounts</Link><br />
-                </div>
-
-                <div className="col-4 p-5 mt-2 mb-2">
-                    <h4><i className="fa-regular fa-circle"></i> Console</h4>
-                    <Link to="/support" style={{ textDecoration: "none", lineHeight: "2.5" }}>Reports</Link><br />
-                    <Link to="/support" style={{ textDecoration: "none", lineHeight: "2.5" }}>Ledger</Link><br />
-                    <Link to="/support" style={{ textDecoration: "none", lineHeight: "2.5" }}>Portfolio</Link><br />
-                    <Link to="/support" style={{ textDecoration: "none", lineHeight: "2.5" }}>60 Day Challenge</Link><br />
-                    <Link to="/support" style={{ textDecoration: "none", lineHeight: "2.5" }}>IPO</Link><br />
-                    <Link to="/support" style={{ textDecoration: "none", lineHeight: "2.5" }}>Referral Program</Link><br />
-                </div>
-
-                <div className="col-4 p-5 mt-2 mb-2">
-                    <h4><i className="fa-solid fa-circle-dollar-to-slot"></i> Coin</h4>
-                    <Link to="/support" style={{ textDecoration: "none", lineHeight: "2.5" }}>Understanding Mutual Funds</Link><br />
-                    <Link to="/support" style={{ textDecoration: "none", lineHeight: "2.5" }}>About Coin</Link><br />
-                    <Link to="/support" style={{ textDecoration: "none", lineHeight: "2.5" }}>Buying and Selling through Coin</Link><br />
-                    <Link to="/support" style={{ textDecoration: "none", lineHeight: "2.5" }}>Starting an SIP</Link><br />
-                    <Link to="/support" style={{ textDecoration: "none", lineHeight: "2.5" }}>Managing your Portfolio</Link><br />
-                    <Link to="/support" style={{ textDecoration: "none", lineHeight: "2.5" }}>Coin App</Link><br />
-                    <Link to="/support" style={{ textDecoration: "none", lineHeight: "2.5" }}>Moving to Coin</Link><br />
-                    <Link to="/support" style={{ textDecoration: "none", lineHeight: "2.5" }}>Government Securities</Link><br />
-                </div>
             </div>
         </div>
     );

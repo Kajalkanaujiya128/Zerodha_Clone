@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 
@@ -25,8 +24,8 @@ function Login() {
   };
 
   return (
-    <div className="login-page">
-      <div className="login-container">
+    <div className="login-page container-fluid d-flex justify-content-center align-items-center px-3 py-4">
+      <div className="login-container w-100">
         <h1>Login to Zerodha</h1>
 
         <p>Enter your registered mobile number to continue.</p>
@@ -34,8 +33,9 @@ function Login() {
         <form onSubmit={handleLogin}>
           <label htmlFor="login-phone">Mobile number</label>
 
-          <div className="login-phone-input">
+          <div className="login-phone-input d-flex align-items-center">
             <span>+91</span>
+
             <input
               id="login-phone"
               type="tel"
@@ -50,7 +50,9 @@ function Login() {
             />
           </div>
 
-          <button type="submit">Continue</button>
+          <button type="submit" className="w-100">
+            Continue
+          </button>
         </form>
 
         <p className="login-signup-link">
